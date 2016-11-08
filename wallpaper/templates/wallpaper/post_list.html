@@ -1,0 +1,63 @@
+
+<html>
+<head>
+  <title></title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+  <style>
+    h1 {
+      font-family: 'Patua One', cursive;
+    }
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+    .wallpost {
+      background: #283845;
+      margin: 20px;
+      padding: 14px;
+    }
+  </style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <div class="panel panel-default" style="background: #202C39; color: #F29559;">
+    <div class="panel-body">
+      <h1>Curated 4K Wallpapers</h1>
+    </div>
+  </div>
+
+
+<div class="jumbotron">
+  <h1>What the heck is this site?</h1>
+  <p>This is what happens when you get fed up with cruddy, add riddled, scumbag, image search cheating, low down wallpaper sites. Seriously, they are the low point of the internet. We hand pick 4K and up high res wallpapers that we would be proud to have on our overpriced sexy displays. Maybe later we will let you submit yours for us to decide if its up to mustard. Maybe later we will have filters and catagories. Maybe later we will have a place to submit copyright claims so we can credit the rightful content creator or remove it. </p>
+  <p>In the mean time, download and use as you please.</p>
+
+</div>
+
+<div class="row">
+{% for post in posts %}
+  <div class="col-md-12 wallpost">
+    <h1>{{ post.title }}</h1>
+    <p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> published: {{ post.published_date }}</p>
+    <img class="img-responsive" width="500" src="http://curated4k.com/static/wallpapers/{{ post.wallpaper }}">
+  </div>
+{% endfor %}
+</div>
+
+
+</div>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body><html>
